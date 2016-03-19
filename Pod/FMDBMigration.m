@@ -58,12 +58,12 @@
         
         resultState = [manager migrateDatabaseToVersion:UINT64_MAX progress:nil error:&error];//迁移函数
         
-        DDLogInfo(@"Has `schema_migrations` table?: %@", manager.hasMigrationsTable ? @"YES" : @"NO");
-        DDLogInfo(@"Origin Version: %llu", manager.originVersion);
-        DDLogInfo(@"Current version: %llu", manager.currentVersion);
-        DDLogInfo(@"All migrations: %@", manager.migrations);
-        DDLogInfo(@"Applied versions: %@", manager.appliedVersions);
-        DDLogInfo(@"Pending versions: %@", manager.pendingVersions);
+        NSLog(@"Has `schema_migrations` table?: %@", manager.hasMigrationsTable ? @"YES" : @"NO");
+        NSLog(@"Origin Version: %llu", manager.originVersion);
+        NSLog(@"Current version: %llu", manager.currentVersion);
+        NSLog(@"All migrations: %@", manager.migrations);
+        NSLog(@"Applied versions: %@", manager.appliedVersions);
+        NSLog(@"Pending versions: %@", manager.pendingVersions);
     }
 }
 
